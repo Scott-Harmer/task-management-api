@@ -43,6 +43,30 @@ paths:
               schema:
                 $ref: '#/components/schemas/Task'
 
+    get:
+      summary: Retrieve tasks
+      description: Retrieves tasks and optionally filters them by status or project.
+      operationId: listTasks
+      parameters:
+        - name: status
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: projectId
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Tasks retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
 components:
   schemas:
     Task:
