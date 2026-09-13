@@ -35,7 +35,7 @@ paths:
                 priority:
                   type: string
                   example: high
-                        responses:
+      responses:
         '201':
           description: Task created successfully.
           content:
@@ -67,6 +67,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Task'
+
   /tasks/{taskId}:
     get:
       summary: Retrieve a task
@@ -88,6 +89,7 @@ paths:
                 $ref: '#/components/schemas/Task'
         '404':
           description: Task not found.
+
     patch:
       summary: Update a task
       description: Updates one or more fields of an existing task.
@@ -123,6 +125,7 @@ paths:
                 $ref: '#/components/schemas/Task'
         '404':
           description: Task not found.
+
     delete:
       summary: Delete a task
       description: Deletes a task by its unique identifier.
@@ -139,6 +142,7 @@ paths:
           description: Task deleted successfully.
         '404':
           description: Task not found.
+
 components:
   schemas:
     Task:
