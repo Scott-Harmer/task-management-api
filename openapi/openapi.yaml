@@ -8,6 +8,7 @@ info:
     updating, filtering, and deleting tasks.
   license:
     name: Proprietary
+        identifier: LicenseRef-Proprietary
 
 servers:
   - url: https://api.task-management.invalid/v1
